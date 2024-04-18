@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Graduate Work Pricing";
+}
+
+<h2>Graduate Work Pricing</h2>
+
+<form method="post" asp-controller="GraduateWork" action="/GraduateWork/GetPrice">
+    <label for="discipline">Дисципліна:</label>
+    <input type="text" id="discipline" name="discipline" required>
+    <button type="submit">Отримати ціну</button>
+</form>
+
+
+<h2>Pass Discipline Pricing</h2>
+
+<form method="post" asp-controller="PassDiscipline" action="/PassDiscipline/GetPriceForGrade">
+    <label for="grade">Оцінка:</label>
+    <input type="text" id="grade" name="grade" required>
+    <button type="submit">Отримати ціну</button>
+</form>
